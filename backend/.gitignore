@@ -1,0 +1,27 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+MEMORY_CONTEXT.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Google OAuth Credentials & Tokens
+credentials.json
+token.json
+app/tools/calendar/credentials.json
+app/tools/calendar/token.json
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo

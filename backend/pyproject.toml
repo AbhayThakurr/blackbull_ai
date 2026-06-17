@@ -1,0 +1,13 @@
+[project]
+name = "black-bulls-backend"
+version = "0.1.0"
+description = "Black Bulls AI Backend"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "pydantic-settings"
+]
+
+[tool.uv]
+dev-dependencies = []
