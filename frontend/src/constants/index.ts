@@ -1,0 +1,58 @@
+import type { AgentDetails } from "../types";
+
+export const BACKEND_URL = "http://localhost:8000";
+
+export const AGENTS_DATA: AgentDetails[] = [
+  {
+    id: "yami",
+    name: "Captain Yami Sukehiro",
+    role: "Supervisor & Orchestrator",
+    magic: "Dark Magic",
+    color: "from-amber-500 to-amber-700",
+    borderColor: "border-amber-500/30",
+    glowColor: "shadow-amber-500/20",
+    status: "ACTIVE",
+    description: "The captain of the Black Bulls. Acts as the primary router. He directly commands local system capabilities (opening apps, changing wallpaper) and delegates to specialized squad members.",
+    tools: ["open_system_app", "list_installed_apps", "change_system_wallpaper", "delegate_to_finral", "delegate_to_noelle"],
+    avatar: "🐈‍⬛",
+  },
+  {
+    id: "finral",
+    name: "Finral Roulacase",
+    role: "Spatial Web Navigator",
+    magic: "Spatial Magic",
+    color: "from-emerald-400 to-teal-600",
+    borderColor: "border-emerald-500/30",
+    glowColor: "shadow-emerald-500/20",
+    status: "ACTIVE",
+    description: "The Black Bulls' portal specialist. Finral opens URLs, searches Google, plays YouTube videos, and navigates portals on command.",
+    tools: ["search_web_in_browser", "open_url_in_browser", "search_youtube", "play_youtube_video"],
+    avatar: "🌀",
+  },
+  {
+    id: "noelle",
+    name: "Noelle Silva",
+    role: "Calendar & Communications Mage",
+    magic: "Water Magic",
+    color: "from-sky-400 to-indigo-600",
+    borderColor: "border-sky-500/30",
+    glowColor: "shadow-sky-500/20",
+    status: "ACTIVE",
+    description: "Water Magic combatant. She handles Google Calendar scheduling, checks meeting conflicts, launches Google Meet endpoints, and drafts email summaries.",
+    tools: ["check_calendar_schedule", "schedule_google_meet", "open_google_meet", "reauthenticate_google_calendar", "complete_google_calendar_auth", "send_email_summary"],
+    avatar: "🌊",
+  },
+  {
+    id: "julius",
+    name: "Julius Novachrono",
+    role: "Wizard King (Admin & Analytics)",
+    magic: "Time Magic",
+    color: "from-purple-500 to-fuchsia-700",
+    borderColor: "border-purple-500/30",
+    glowColor: "shadow-purple-500/20",
+    status: "INACTIVE",
+    description: "The Magic Emperor. Reserved for system-wide auditing, time-series performance tracking, database optimization, and high-tier reasoning capabilities.",
+    tools: ["temporal_rollback", "system_reboot", "magic_audit"],
+    avatar: "⏳",
+  },
+];

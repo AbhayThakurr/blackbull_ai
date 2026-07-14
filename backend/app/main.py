@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from app.api.routes.chat import router as chat_router
+from app.api.routes.memory import router as memory_router
 from app.discord_bot import bot, start_discord_bot
 
 logger = logging.getLogger(__name__)
@@ -32,9 +33,20 @@ async def lifespan(app: FastAPI):
     await bot_task
 
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(title="BlackBull AI", version="1.0.0", lifespan=lifespan)
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(chat_router)
+app.include_router(memory_router)
 
 
 @app.get("/")
